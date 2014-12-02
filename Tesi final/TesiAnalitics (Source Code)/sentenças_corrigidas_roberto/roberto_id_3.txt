@@ -1,0 +1,188 @@
+id = 3
+
+Senteça Normal:
+Seu empreendedorismo levou à constituição de um dos maiores império de comunicação do planeta e o fez figurar diversas vezes entre os homens mais ricos do mundo
+
+Sentença Parseada Incorreta:
+(ROOT
+      (S
+            (S
+                  (S
+                        (NP
+                              (PRS Seu)
+                        )
+                        (VP
+                              (V'
+                                    (V'
+                                          (NP
+                                                (N empreendedorismo)
+                                          )
+                                          (V levou)
+                                    )
+                                    (ADV constituio)
+                              )
+                              (NP
+                                    (CARD'
+                                          (ADV'
+                                                (ADV de)
+                                                (ADV um)
+                                          )
+                                          (CARD'
+                                                (CARD de_)
+                                                (CARD os)
+                                                (CARD maiores)
+                                          )
+                                    )
+                              )
+                        )
+                  )
+                  (S
+                        (PP
+                              (PP
+                                    (P imprio)
+                                    (NP
+                                          (ART de)
+                                          (N'
+                                                (A comunicao)
+                                                (N'
+                                                      (N de_)
+                                                      (N o)
+                                                      (N planeta)
+                                                      (N e)
+                                                )
+                                          )
+                                    )
+                              )
+                              (PNT o)
+                        )
+                        (S
+                              (ADV fez)
+                              (S
+                                    (NP
+                                          (ART figurar)
+                                          (N'
+                                                (PP
+                                                      (P diversas)
+                                                      (NP
+                                                            (ART vezes)
+                                                            (N'
+                                                                  (N entre)
+                                                                  (PP
+                                                                        (P os)
+                                                                        (NP
+                                                                              (ART homens)
+                                                                              (N mais)
+                                                                        )
+                                                                  )
+                                                            )
+                                                      )
+                                                )
+                                          )
+                                    )
+                                    (VP
+                                          (V ricos)
+                                          (NP
+                                                (ART de_)
+                                                (N o)
+                                          )
+                                    )
+                              )
+                        )
+                  )
+            )
+            (PNT mundo)
+      )
+)
+
+
+Sentença Parseada Corrigida:
+(ROOT
+      (S
+            (S
+                  (S
+                        (NP
+                              (PRS Seu)
+                        )
+                        (VP
+                              (V'
+                                    (V'
+                                          (NP
+                                                (N empreendedorismo)
+                                          )
+                                          (V levou)
+                                    )
+                                    (ADV constituio) //enconde //N
+                              )
+                              (NP
+                                    (CARD'
+                                          (ADV'
+                                                (ADV de) //P
+                                                (ADV um) //ART
+                                          )
+                                          (CARD'
+                                                (CARD de_) //P
+                                                (CARD os) //ART
+                                                (CARD maiores) ADV
+                                          )
+                                    )
+                              )
+                        )
+                  )
+                  (S
+                        (PP
+                              (PP
+                                    (P imprio) //enconde //N
+                                    (NP
+                                          (ART de) //P
+                                          (N'
+                                                (A comunicao) //N
+                                                (N'
+                                                      (N de_) //P
+                                                      (N o) //A
+                                                      (N planeta) 
+                                                      (N e) //CONJ
+                                                )
+                                          )
+                                    )
+                              )
+                              (PNT o) //ART
+                        )
+                        (S
+                              (ADV fez) //V
+                              (S
+                                    (NP
+                                          (ART figurar) V
+                                          (N'
+                                                (PP
+                                                      (P diversas) //DET
+                                                      (NP
+                                                            (ART vezes) N
+                                                            (N'
+                                                                  (N entre)  //P
+                                                                  (PP
+                                                                        (P os) //ART
+                                                                        (NP
+                                                                              (ART homens) //N
+                                                                              (N mais) //ADV
+                                                                        )
+                                                                  )
+                                                            )
+                                                      )
+                                                )
+                                          )
+                                    )
+                                    (VP
+                                          (V ricos) //ADJ
+                                          (NP
+                                                (ART de_) //P
+                                                (N o) //ART
+                                          )
+                                    )
+                              )
+                        )
+                  )
+            )
+            (PNT mundo) //N
+      )
+)
+

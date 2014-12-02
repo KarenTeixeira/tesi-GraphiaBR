@@ -1,0 +1,144 @@
+id = 1
+
+Senteça Normal:
+Roberto Pisani Marinho (Rio de Janeiro, — Rio de Janeiro, ) foi um jornalista e empresário brasileiro
+
+Sentença Parseada Incorreta:
+(ROOT
+      (S
+            (NP
+                  (NP
+                        (N'
+                              (N Roberto)
+                              (N'
+                                    (N Pisani)
+                                    (A Marinho)
+                              )
+                        )
+                  )
+                  (NP
+                        (ART
+                              ()
+                              (N'
+                                    (N Rio)
+                                    (PP
+                                          (P de)
+                                          (NP
+                                                (N Janeiro)
+                                          )
+                                    )
+                              )
+                        )
+                  )
+                  (VP
+                        (PP
+                              (PNT ,)
+                              (PP
+                                    (P Rio)
+                                    (NP
+                                          (N'
+                                                (N de)
+                                                (PP
+                                                      (P Janeiro)
+                                                      (NP
+                                                            (N ,)
+                                                      )
+                                                )
+                                          )
+                                    )
+                              )
+                              (PNT )
+                        )
+                  )
+                  (VP
+                        (V foi)
+                        (PP
+                              (P um)
+                              (NP
+                                    (ART jornalista)
+                                    (N'
+                                          (N e)
+                                          (PP
+                                                (P empresrio)
+                                                (NP
+                                                      (N brasileiro)
+                                                )
+                                          )
+                                    )
+                              )
+                        )
+                  )
+            )
+      )
+)
+
+
+Sentença Parseada Corrigida:
+(ROOT
+      (S
+            (NP
+                  (NP
+                        (N'
+                              (N Roberto)
+                              (N'
+                                    (N Pisani)
+                                    (A Marinho) //N
+                              )
+                        )
+                  )
+                  (NP
+                        (ART
+                              ()
+                              (N'
+                                    (N Rio)
+                                    (PP
+                                          (P de)
+                                          (NP
+                                                (N Janeiro)
+                                          )
+                                    )
+                              )
+                        )
+                  )
+                  (VP
+                        (PP
+                              (PNT ,)
+                              (PP
+                                    (P Rio) //N
+                                    (NP
+                                          (N'
+                                                (N de) //P
+                                                (PP
+                                                      (P Janeiro) //N
+                                                      (NP
+                                                            (N ,) //PNT
+                                                      )
+                                                )
+                                          )
+                                    )
+                              )
+                              (PNT )
+                        )
+                  )
+                  (VP
+                        (V foi)
+                        (PP
+                              (P um)
+                              (NP
+                                    (ART jornalista) //N
+                                    (N'
+                                          (N e) //P
+                                          (PP
+                                                (P empresrio) //N
+                                                (NP
+                                                      (N brasileiro) //ADJ
+                                                )
+                                          )
+                                    )
+                              )
+                        )
+                  )
+            )
+      )
+)
+

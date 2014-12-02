@@ -1,0 +1,30 @@
+id = 0
+
+Senteça Normal:
+Roberto Marinho
+
+Sentença Parseada Incorreta:
+(ROOT
+      (S
+            (NP
+                  (N'
+                        (N Roberto)
+                        (A Marinho)
+                  )
+            )
+      )
+)
+
+
+Sentença Parseada Corrigida:
+(ROOT
+      (S
+            (NP
+                  (N'
+                        (N Roberto)
+                        (A Marinho) // N
+                  )
+            )
+      )
+)
+

@@ -1,0 +1,146 @@
+id = 2
+
+Senteça Normal:
+Proprietário das Organizações Globo de 1925 a 2003, foi um dos homens mais poderosos e influentes do país no século XX
+
+Sentença Parseada Incorreta:
+(ROOT
+      (S
+            (NP
+                  (N'
+                        (N Proprietrio)
+                        (PP
+                              (P de_)
+                              (NP
+                                    (N'
+                                          (N as)
+                                          (PP
+                                                (P Organizaes)
+                                                (NP
+                                                      (ART Globo)
+                                                      (N'
+                                                            (N de)
+                                                            (N 1925)
+                                                            (N a)
+                                                            (N 2003)
+                                                            (N ,)
+                                                            (N foi)
+                                                            (N um)
+                                                            (N de_)
+                                                            (N os)
+                                                      )
+                                                )
+                                          )
+                                    )
+                              )
+                        )
+                  )
+            )
+            (VP
+                  (V homens)
+                  (ADVP
+                        (ADVP
+                              (ADV mais)
+                              (PP
+                                    (P poderosos)
+                                    (NP
+                                          (ART e)
+                                          (N influentes)
+                                    )
+                              )
+                        )
+                        (ADVP
+                              (ADV de_)
+                              (PP
+                                    (P o)
+                                    (NP
+                                          (ART pas)
+                                          (N'
+                                                (N em_)
+                                                (PP
+                                                      (P o)
+                                                      (NP
+                                                            (ART sculo)
+                                                            (N XX)
+                                                      )
+                                                )
+                                          )
+                                    )
+                              )
+                        )
+                  )
+            )
+      )
+)
+
+
+Sentença Parseada Corrigida:
+(ROOT
+      (S
+            (NP
+                  (N'
+                        (N Proprietrio)
+                        (PP
+                              (P de_)
+                              (NP
+                                    (N'
+                                          (N as) //artigo
+                                          (PP
+                                                (P Organizaes) //encoding //N
+                                                (NP
+                                                      (ART Globo) //N
+                                                      (N'
+                                                            (N de) //P
+                                                            (N 1925) //CARD
+                                                            (N a) //P
+                                                            (N 2003) //CARD
+                                                            (N ,) //PNT
+                                                            (N foi) //V
+                                                            (N um) //ART
+                                                            (N de_) //P
+                                                            (N os) //A
+                                                      )
+                                                )
+                                          )
+                                    )
+                              )
+                        )
+                  )
+            )
+            (VP
+                  (V homens) //V
+                  (ADVP
+                        (ADVP
+                              (ADV mais) 
+                              (PP
+                                    (P poderosos) //ADJ
+                                    (NP
+                                          (ART e) //CONJ
+                                          (N influentes) //ADJ
+                                    )
+                              )
+                        )
+                        (ADVP
+                              (ADV de_) //P
+                              (PP
+                                    (P o) //ART
+                                    (NP
+                                          (ART pas) //enconde //N
+                                          (N'
+                                                (N em_) //P
+                                                (PP
+                                                      (P o) // ART
+                                                      (NP
+                                                            (ART sculo) //encoding //N
+                                                            (N XX) //cardinal
+                                                      )
+                                                )
+                                          )
+                                    )
+                              )
+                        )
+                  )
+            )
+      )
+)
+
